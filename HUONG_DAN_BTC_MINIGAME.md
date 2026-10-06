@@ -20,12 +20,12 @@
    - **Tuyệt đối không** được phép kéo thả hay hoán đổi vị trí các ô.
    - **Không hiển thị nút xem hình gốc** (ngăn ngừa sinh viên tự ý xem trước hoặc chụp lại màn hình).
 2. **Kích hoạt lượt thi từ BTC**:
-   - Đến lượt thi đấu của nhóm/cặp nào, đại diện BTC lên máy chủ bấm `[BẮT ĐẦU / NHẬP PASS]` và nhập mật mã `HCM202-FA26`.
-   - Sau khi nhập đúng mật mã, hệ thống mới chính thức mở khóa chức năng kéo thả và tính giờ.
+   - Khi các đại diện nhóm bước lên thi đấu, BTC đọc/nhập mật mã `HCM202-FA26` vào máy của thí sinh để mở khóa quyền chơi.
+   - Sau khi nhập đúng mật mã, hệ thống mới chính thức mở khóa chức năng kéo thả và bắt đầu tính giờ khi có thao tác đầu tiên.
 3. **Quy định về nút `[HIỆN HÌNH GỐC]` (Quyền quyết định thuộc về BTC)**:
    - **Mặc định**: Hình gốc **bị ẩn** để thử thách tối đa khả năng quan sát và ghi nhớ của sinh viên.
    - **Trường hợp cứu trợ / Gợi ý**: Nếu trận đấu rơi vào thế bế tắc hoặc hình ảnh quá khó mà thí sinh không giải được sau một khoảng thời gian quy định (ví dụ: quá 3 - 5 phút), **chỉ có BTC mới có thẩm quyền bấm nút `[HIỆN HÌNH GỐC]` để trợ giúp tuyển thủ**, hoặc BTC có thể ra điều kiện: *"Đội xin gợi ý hình gốc sẽ bị cộng thêm 15 giây hoặc 5 bước phạt"*.
-   - Sau khi tham khảo xong, BTC có thể bấm `[ẨN GỢI Ý]` để đóng khung ảnh gốc lại.
+   - Sau khi tham khảo xong, bấm `[ẨN GỢI Ý]` để đóng khung ảnh gốc lại.
 4. **Cơ chế tính giờ tự động**:
    - Đồng hồ bấm giờ **chỉ bắt đầu chạy khi tuyển thủ thực hiện cú chạm / đổi vị trí đầu tiên** (không tính thời gian chuẩn bị hay quan sát bàn cờ trước).
    - Mỗi bàn cờ luôn được hệ thống **mở khóa sẵn 1 ô đúng làm điểm tựa ban đầu** (Anchor Tile).
@@ -55,10 +55,20 @@
 
 ---
 
-## 5. HƯỚNG DẪN BTC TRIỂN KHAI TRÊN LỚP HỌC (OFFLINE / HYBRID)
+## 5. HƯỚNG DẪN BTC VẬN HÀNH TRÊN LỚP HỌC (MÔ HÌNH THI ĐẤU TRỰC TIẾP)
 
-### Bước 1: Chuẩn bị bảng lớp (Blackboard)
-Khuyến khích Ban cán sự vẽ ngay sơ đồ nhánh thi đấu lên bảng đen lớp học để cả lớp cùng cổ vũ và tăng tính kịch tính:
+### Mô hình thiết bị:
+- **01 Máy tính của BTC (Máy chiếu chính)**: Cắm vào Projector của lớp học để chiếu trang web minigame, hiển thị thể lệ, sơ đồ nhánh đấu và chiếu trực tiếp màn thi đấu/bảng điểm cho cả lớp cùng theo dõi và cổ vũ.
+- **Thiết bị của các tuyển thủ (Laptop cá nhân)**:
+  - Khi đến lượt đấu của cặp nào, **đại diện các đội cầm laptop/thiết bị của mình lên bàn phía trên trước lớp**.
+  - Các tuyển thủ mở trình duyệt truy cập vào link web minigame trên máy của mình.
+  - Hoặc luân phiên thi đấu trực tiếp trên máy được kết nối máy chiếu nếu lớp chỉ dùng 1 máy trung tâm.
+
+### Quy trình 4 bước tổ chức:
+
+#### Bước 1: Chuẩn bị bảng lớp (Blackboard) & Máy chiếu
+- **Máy chiếu BTC**: Chiếu màn hình website bài học và giao diện minigame.
+- **Bảng đen lớp học**: Ban cán sự vẽ ngay sơ đồ nhánh thi đấu 8 nhóm lên bảng:
 ```text
 ┌──────────────┐
 │  Nhóm 1 vs 2 ├──┐ [Thắng 1-2]
@@ -73,21 +83,24 @@ Khuyến khích Ban cán sự vẽ ngay sơ đồ nhánh thi đấu lên bảng 
 │  Nhóm 7 vs 8 ├──┘ [Thắng 5-6]
 └──────────────┘
 ```
-- Phấn ghi rõ: `Tên Nhóm` | `Đại diện thi đấu` | `Thời gian (mm:ss.ms)` | `Số bước (moves)` | `Có dùng trợ giúp hình gốc hay không`.
+- Phấn ghi các cột: `Tên Nhóm` | `Đại diện thi đấu` | `Thời gian (mm:ss.ms)` | `Số bước (moves)` | `Dùng trợ giúp hình gốc?`.
 
-### Bước 2: Chuẩn bị thiết bị chiếu (Projector)
-- Máy tính của BTC/Giảng viên kết nối máy chiếu ra màn hình lớn của lớp.
-- Truy cập vào trang web ứng dụng: `http://localhost:5173` (hoặc domain triển khai).
-- Hướng dẫn sinh viên hoàn thành đọc nội dung tóm tắt Chương 4 (Phần I, II, III & Kho trích dẫn) rồi bấm nút **"VÀO PHÒNG THI ĐẤU MINIGAME NGAY"** ở cuối trang.
+#### Bước 2: Gọi tuyển thủ lên vị trí thi đấu
+- Trọng tài/BTC thông báo cặp đấu tiếp theo (Ví dụ: Trận Tứ kết 1 - Nhóm 1 gặp Nhóm 2).
+- **Thành viên đại diện của 2 đội cầm laptop cá nhân của mình bước lên bàn thi đấu phía trên giảng đường**.
+- Cả hai đội thống nhất hoặc bốc thăm chọn chung 1 bức ảnh tư liệu (sử dụng nút `[ĐỔI HÌNH NGẪU NHIÊN]`).
+- Cả hai đội chọn đúng kích thước vòng đấu (`4x4` cho Vòng 1, `6x6` cho Bán kết, `8x8` cho Chung kết).
 
-### Bước 3: Điều hành lượt đấu
-1. Mời 2 đại diện nhóm thi đấu của lượt trận lên bàn điều khiển (hoặc thi đấu luân phiên theo lượt bấm giờ).
-2. Chọn kích thước lưới tương ứng với vòng đấu (`4x4` cho Vòng 1, `6x6` cho Bán kết, `8x8` cho Chung kết).
-3. Bấm `[ĐỔI HÌNH NGẪU NHIÊN]` hoặc `[TRỘN LẠI / RESET]` để tạo đề thi mới cho từng lượt.
-4. BTC nhập mật mã `HCM202-FA26`.
-5. Đếm khẩu lệnh "3 - 2 - 1 Bắt đầu!": Thí sinh chạm vào ô đầu tiên để đồng hồ tự động kích hoạt tính giờ.
-6. **Xử lý tình huống khó**: Nếu thí sinh gặp khó khăn kéo dài, BTC cân nhắc bấm `[HIỆN HÌNH GỐC]` để mở gợi ý hình ảnh trực tiếp.
-7. Khi hoàn thành: Màn hình kích hoạt pháo hoa chúc mừng kèm thống kê chính xác thời gian và số bước. Thư ký ghi nhận kết quả lên bảng lớp.
+#### Bước 3: BTC cấp quyền & Bắt đầu trận đấu
+1. Thành viên BTC tiến hành nhập mật khẩu `HCM202-FA26` trên máy của cả 2 tuyển thủ (hoặc đọc mật khẩu cho thí sinh nhập dưới sự giám sát).
+2. Trọng tài đếm hiệu lệnh: **"3 - 2 - 1 BẮT ĐẦU!"**.
+3. Tuyển thủ click/kéo mảnh ghép đầu tiên &rarr; Đồng hồ tính giờ trên từng máy tự động đếm giờ song song.
+4. Cả lớp quan sát, reo hò cổ vũ theo diễn biến thi đấu.
+
+#### Bước 4: Xử lý tình huống khó & Ghi nhận kết quả
+- **Tình huống khó**: Nếu bức tranh quá khó, thí sinh có thể ra tín hiệu xin trợ giúp. **Chỉ BTC mới có quyền quyết định cho phép bấm `[HIỆN HÌNH GỐC]`**. BTC có thể áp dụng luật phạt cộng thêm giây nếu muốn.
+- **Về đích**: Ngay khi ghép xong ô cuối cùng, màn hình bung pháo hoa ăn mừng kèm bảng thông báo chiến thắng có đầy đủ **Thời gian** và **Số lượt di chuyển**.
+- Thư ký lập tức ghi kết quả chính thức của 2 đội lên bảng lớp, xác định đội thắng bước tiếp vào vòng sau.
 
 ---
 
