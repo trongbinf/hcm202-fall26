@@ -103,15 +103,4 @@
 - Thư ký lập tức ghi kết quả chính thức của 2 đội lên bảng lớp, xác định đội thắng bước tiếp vào vòng sau.
 
 ---
-
-## 6. NGUỒN ẢNH TƯ LIỆU SỬ DỤNG
-Toàn bộ ảnh tư liệu của trò chơi được lưu trữ sẵn trong thư mục nội bộ `/public/img/`, đảm bảo chạy mượt mà ngay cả khi không có mạng Internet:
-- `ttxvn_bac_ho_1_1-900x600.png`: Chân dung Chủ tịch Hồ Chí Minh (Ảnh tư liệu TTXVN).
-- `14052020ttxvn1.jpg`: Sự lãnh đạo của Đảng và Chủ tịch Hồ Chí Minh toàn dân kháng chiến.
-- `21-01-2024-nhan-thuc-sau-sac...jpg`: Nhận thức sâu sắc tư tưởng Hồ Chí Minh về xây dựng, chỉnh đốn Đảng.
-- `dsds.jpg`: Bác Hồ với đồng bào, chiến sĩ và nhân dân cả nước.
-- `a2-jpg...png`: Chủ tịch Hồ Chí Minh làm việc trong thời kỳ kháng chiến kiến quốc.
-- `images.jpeg`: Chủ tịch Hồ Chí Minh chủ trì hội nghị Trung ương Đảng.
-
----
 *Chúc Ban Tổ chức và lớp học có một buổi học tập chuyên đề Chương 4 thật hào hứng, bổ ích và thành công rực rỡ!*
