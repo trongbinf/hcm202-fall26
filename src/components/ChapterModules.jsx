@@ -6,7 +6,7 @@ import {
   KEY_QUOTES,
   CHAPTER_INFO
 } from '../data/chapterData';
-import { puzzleImages } from '../data/puzzles';
+import { lessonImages } from '../data/lessonImages';
 
 export default function ChapterModules({ onNavigateToGame }) {
   const [activeTab, setActiveTab] = useState('part-1');
@@ -73,22 +73,22 @@ export default function ChapterModules({ onNavigateToGame }) {
           <div className="lesson-media-banner" style={{ marginTop: '24px' }}>
             <div className="lesson-image-card">
               <img
-                src={puzzleImages[0]?.src}
-                alt={puzzleImages[0]?.title}
+                src={lessonImages[0]?.src}
+                alt={lessonImages[0]?.title}
                 className="lesson-historical-img"
               />
               <div className="lesson-img-caption font-mono">
-                {puzzleImages[0]?.title}
+                {lessonImages[0]?.title}
               </div>
             </div>
             <div className="lesson-image-card">
               <img
-                src={puzzleImages[1]?.src}
-                alt={puzzleImages[1]?.title}
+                src={lessonImages[1]?.src}
+                alt={lessonImages[1]?.title}
                 className="lesson-historical-img"
               />
               <div className="lesson-img-caption font-mono">
-                {puzzleImages[1]?.title}
+                {lessonImages[1]?.title}
               </div>
             </div>
           </div>
@@ -126,13 +126,13 @@ export default function ChapterModules({ onNavigateToGame }) {
             <div className="single-image-spotlight" style={{ margin: '24px 0' }}>
               <div className="lesson-image-card" style={{ maxWidth: '640px', margin: '0 auto' }}>
                 <img
-                  src={puzzleImages[2]?.src}
-                  alt={puzzleImages[2]?.title}
+                  src={lessonImages[2]?.src}
+                  alt={lessonImages[2]?.title}
                   className="lesson-historical-img"
                   style={{ height: '300px' }}
                 />
                 <div className="lesson-img-caption font-mono">
-                  {puzzleImages[2]?.title}
+                  {lessonImages[2]?.title}
                 </div>
               </div>
             </div>
@@ -159,22 +159,22 @@ export default function ChapterModules({ onNavigateToGame }) {
             <div className="lesson-media-banner" style={{ marginBottom: '24px' }}>
               <div className="lesson-image-card">
                 <img
-                  src={puzzleImages[3]?.src}
-                  alt={puzzleImages[3]?.title}
+                  src={lessonImages[3]?.src}
+                  alt={lessonImages[3]?.title}
                   className="lesson-historical-img"
                 />
                 <div className="lesson-img-caption font-mono">
-                  {puzzleImages[3]?.title}
+                  {lessonImages[3]?.title}
                 </div>
               </div>
               <div className="lesson-image-card">
                 <img
-                  src={puzzleImages[4]?.src}
-                  alt={puzzleImages[4]?.title}
+                  src={lessonImages[4]?.src}
+                  alt={lessonImages[4]?.title}
                   className="lesson-historical-img"
                 />
                 <div className="lesson-img-caption font-mono">
-                  {puzzleImages[4]?.title}
+                  {lessonImages[4]?.title}
                 </div>
               </div>
             </div>
@@ -265,26 +265,26 @@ export default function ChapterModules({ onNavigateToGame }) {
             <p className="module-summary">{PART_II_DATA.summary}</p>
           </div>
 
-          {/* Gallery tư liệu cho Phần 2 từ file markdown */}
+          {/* Gallery tư liệu cho Phần 2 từ file HCM202_Chuong4_NoiDung.md */}
           <div className="lesson-media-banner" style={{ marginTop: '24px' }}>
             <div className="lesson-image-card">
               <img
-                src={puzzleImages[4 % puzzleImages.length]?.src}
-                alt={puzzleImages[4 % puzzleImages.length]?.title}
+                src={lessonImages[5]?.src}
+                alt={lessonImages[5]?.title}
                 className="lesson-historical-img"
               />
               <div className="lesson-img-caption font-mono">
-                {puzzleImages[4 % puzzleImages.length]?.title}
+                {lessonImages[5]?.title}
               </div>
             </div>
             <div className="lesson-image-card">
               <img
-                src={puzzleImages[5 % puzzleImages.length]?.src}
-                alt={puzzleImages[5 % puzzleImages.length]?.title}
+                src={lessonImages[7]?.src}
+                alt={lessonImages[7]?.title}
                 className="lesson-historical-img"
               />
               <div className="lesson-img-caption font-mono">
-                {puzzleImages[5 % puzzleImages.length]?.title}
+                {lessonImages[7]?.title}
               </div>
             </div>
           </div>
@@ -388,26 +388,26 @@ export default function ChapterModules({ onNavigateToGame }) {
             <p className="module-summary">{PART_III_DATA.summary}</p>
           </div>
 
-          {/* Gallery tư liệu cho Phần 3 */}
+          {/* Gallery tư liệu cho Phần 3 từ file HCM202_Chuong4_NoiDung.md */}
           <div className="lesson-media-banner" style={{ marginTop: '24px' }}>
             <div className="lesson-image-card">
               <img
-                src={puzzleImages[2 % puzzleImages.length]?.src}
-                alt={puzzleImages[2 % puzzleImages.length]?.title}
+                src={lessonImages[6]?.src}
+                alt={lessonImages[6]?.title}
                 className="lesson-historical-img"
               />
               <div className="lesson-img-caption font-mono">
-                {puzzleImages[2 % puzzleImages.length]?.title}
+                {lessonImages[6]?.title}
               </div>
             </div>
             <div className="lesson-image-card">
               <img
-                src={puzzleImages[3 % puzzleImages.length]?.src}
-                alt={puzzleImages[3 % puzzleImages.length]?.title}
+                src={lessonImages[4]?.src}
+                alt={lessonImages[4]?.title}
                 className="lesson-historical-img"
               />
               <div className="lesson-img-caption font-mono">
-                {puzzleImages[3 % puzzleImages.length]?.title}
+                {lessonImages[4]?.title}
               </div>
             </div>
           </div>
