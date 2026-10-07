@@ -579,6 +579,58 @@ body.hcm-body {
   line-height: 1.6;
 }
 
+/* 8 Principles Checklist (Xuống dòng đẹp mắt theo hàng và cột) */
+.principles-checklist-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.principle-item {
+  background: #fdfbf7;
+  border: 1px solid rgba(197, 155, 39, 0.35);
+  border-left: 4px solid var(--color-gold);
+  border-radius: 6px;
+  padding: 12px 16px;
+  font-size: 0.88rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  color: #1e293b;
+  transition: all 0.2s ease;
+}
+
+.principle-item:hover {
+  background: #ffffff;
+  border-left-color: var(--color-red-primary);
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(133, 0, 5, 0.08);
+}
+
+.principle-num {
+  background: #850005;
+  color: #ffffff;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+
+.principle-text {
+  flex: 1;
+  line-height: 1.4;
+}
+
+@media (max-width: 640px) {
+  .principles-checklist-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Cadre Checklist (9 Yêu cầu) */
 .cadre-checklist-grid {
   display: grid;

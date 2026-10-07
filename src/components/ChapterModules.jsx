@@ -211,11 +211,12 @@ export default function ChapterModules({ onNavigateToGame }) {
             <div className="concept-card" style={{ marginTop: '32px' }}>
               <div className="card-badge font-mono">// NGUYÊN TẮC CỐT LÕI</div>
               <h4 className="card-heading font-serif">8 Nguyên tắc tổ chức & sinh hoạt Đảng theo Tư tưởng Hồ Chí Minh</h4>
-              <div className="principles-tags-cloud font-mono">
+              <div className="principles-checklist-grid font-sans">
                 {PART_I_DATA.principles.map((pr, i) => (
-                  <span key={i} className="principle-pill">
-                    <strong>0{i + 1}.</strong> {pr}
-                  </span>
+                  <div key={i} className="principle-item">
+                    <span className="principle-num font-mono">0{i + 1}</span>
+                    <span className="principle-text">{pr}</span>
+                  </div>
                 ))}
               </div>
             </div>
